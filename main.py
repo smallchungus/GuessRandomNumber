@@ -12,16 +12,23 @@ def randomNum():
     seed(1)
     value = randint(0, 10)
     print("The random value is " + str(value))
-    userGuess = takeInput()
+    "userGuess = takeInput()"
+    "computerGuess = ComputerGuess()"
+    computerguess = randint(0, 10)
 
-    while userGuess != value:
-        if userGuess < value:
+    while computerguess != value:
+        if computerguess < value:
             print("Too low")
-            userGuess = takeInput()
-        elif userGuess > value:
+            "userGuess = takeInput()"
+            computerguess = randint(computerguess, 0)
+            print(f"The computer guessed {computerguess}")
+        elif computerguess > value:
             print("Too high")
-            userGuess = takeInput()
+            "userGuess = takeInput()"
+            computerguess = randint(0, computerguess)
+            print(f"The computer guessed {computerguess}")
     else:
-        print("You guessed correctly")
+        print("The Computer guessed correctly")
+
 
 randomNum()
